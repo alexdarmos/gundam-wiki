@@ -1,0 +1,30 @@
+.nav-container {
+	display: flex;
+	position: fixed;
+	z-index: 20;
+	height: 50px;
+	width: 100%;
+	background: black;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.fa {
+	font-family: 'Font Awesome\ 5 Free';
+	content: '\f0c9';
+	font-weight: 900;
+	font-size: 30px;
+	padding: 10px;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	z-index: 10;
+}
+
+.title {
+	color: white;
+}
+
+.invisible-flex-item {
+	width: 55px;
+}
