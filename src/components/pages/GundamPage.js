@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Gundams from '../gundams/Gundams';
 import GundamDetailsBar from '../layout/GundamDetailsBar';
 
 const GundamPage = ({ gundams }) => {
-	// let tempActive = gundams[0];
+	const [activeGundam, setActiveGundam] = useState(gundams[0]);
 
-	function retrieveActive(activeGundam) {
-		let tempActive = activeGundam;
-		return tempActive;
-	}
+	const retrieveActiveGundam = gundam => {
+		setActiveGundam(gundam);
+	};
 
 	return (
 		<div>
-			<Gundams gundams={gundams} retrieveActive={retrieveActive} />
-			<GundamDetailsBar tempActive={retrieveActive} />
+			<Gundams gundams={gundams} retrieveActiveGundam={retrieveActiveGundam} />
+			<GundamDetailsBar activeGundam={activeGundam} />
 		</div>
 	);
 };

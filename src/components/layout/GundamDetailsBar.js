@@ -1,9 +1,8 @@
 import React from 'react';
 import '../../assets/css/GundamDetailsBar.css';
 
-const GundamDetailsBar = ({ tempActive }) => {
-	const { fighting, weapons, speed, power, armor } = tempActive.abilityLevels;
-	console.log(tempActive);
+const GundamDetailsBar = ({ activeGundam }) => {
+	const { fighting, weapons, speed, power, armor } = activeGundam.abilityLevels;
 	return (
 		<div className="gundam-detail-bar">
 			<p>Fighting: {fighting}</p>

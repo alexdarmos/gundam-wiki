@@ -2,15 +2,9 @@ import React, { useState, useEffect } from 'react';
 import GundamItem from './GundamItem';
 import '../../assets/css/GundamItem.css';
 
-const Gundams = ({ gundams, retrieveActive }) => {
-	const [activeGundam, setActiveGundam] = useState(gundams[0]);
-
-	useEffect(() => {
-		retrieveActive(activeGundam);
-	}, [retrieveActive]);
-
-	function retrieveGundam(gundam) {
-		setActiveGundam(gundam);
+const Gundams = ({ gundams, retrieveActiveGundam }) => {
+	function getGundamRef(gundam) {
+		retrieveActiveGundam(gundam);
 	}
 
 	return (
@@ -19,7 +13,7 @@ const Gundams = ({ gundams, retrieveActive }) => {
 				<GundamItem
 					key={gundam.id}
 					gundam={gundam}
-					retrieveGundam={retrieveGundam}
+					getGundamRef={getGundamRef}
 				/>
 			))}
 		</div>
