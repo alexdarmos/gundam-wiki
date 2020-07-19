@@ -2,19 +2,11 @@ import React, { useState, useEffect } from 'react';
 import GundamItem from './GundamItem';
 import '../../assets/css/GundamItem.css';
 
-const Gundams = ({ gundams, retrieveActiveGundam }) => {
-	function getGundamRef(gundam) {
-		retrieveActiveGundam(gundam);
-	}
-
+const Gundams = ({ gundams }) => {
 	return (
 		<div className="gundam-container">
 			{gundams.map(gundam => (
-				<GundamItem
-					key={gundam.id}
-					gundam={gundam}
-					getGundamRef={getGundamRef}
-				/>
+				<GundamItem key={gundam.id} gundam={gundam} />
 			))}
 		</div>
 	);

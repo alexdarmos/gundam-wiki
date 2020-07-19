@@ -3,16 +3,16 @@ import Gundams from '../gundams/Gundams';
 import GundamDetailsBar from '../layout/GundamDetailsBar';
 
 const GundamPage = ({ gundams }) => {
-	const [activeGundam, setActiveGundam] = useState(gundams[0]);
+	// const [activeGundam, setActiveGundam] = useState(gundams[0]);
 
-	const retrieveActiveGundam = gundam => {
-		setActiveGundam(gundam);
-	};
+	// const retrieveActiveGundam = gundam => {
+	// 	setActiveGundam(gundam);
+	// };
 
 	return (
 		<div>
-			<Gundams gundams={gundams} retrieveActiveGundam={retrieveActiveGundam} />
-			<GundamDetailsBar activeGundam={activeGundam} />
+			<Gundams gundams={gundams} />
+			<GundamDetailsBar />
 		</div>
 	);
 };

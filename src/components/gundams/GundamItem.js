@@ -1,6 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import '../../assets/css/GundamItem.css';
-const GundamItem = ({ gundam, getGundamRef }) => {
+import GundamContext from '../context/gundam/GundamContext';
+const GundamItem = ({ gundam }) => {
+	const gundamContext = useContext(GundamContext);
+
+	const { getActiveGundam } = gundamContext;
+
 	const banner = {
 		backgroundImage: `url(${gundam.banner})`,
 		height: '100vh',
@@ -17,7 +22,7 @@ const GundamItem = ({ gundam, getGundamRef }) => {
 			let screenPosition = e.target.scrollTop;
 
 			if (screenPosition === gundamPosition) {
-				getGundamRef(gundam);
+				getActiveGundam(gundam);
 			}
 		}
 
@@ -29,7 +34,7 @@ const GundamItem = ({ gundam, getGundamRef }) => {
 				.querySelector('.gundam-container')
 				.removeEventListener('scroll', listener);
 		};
-	}, [getGundamRef, gundam]);
+	}, [gundam]);
 
 	return (
 		<div
