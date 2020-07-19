@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import GundamContext from '../context/gundam/GundamContext';
+//enables scroll to anchor tag for back button
+import { HashLink as Link } from 'react-router-hash-link';
 
 const GundamDetailsPage = ({ match }) => {
 	const gundamContext = useContext(GundamContext);
@@ -12,6 +14,9 @@ const GundamDetailsPage = ({ match }) => {
 		<div>
 			<p>{activeGundam.name}</p>
 			<p>{activeGundam.shortDescription}</p>
+			<Link to={`/#gundam-item-${activeGundam.id}`} className="home-btn">
+				Back
+			</Link>
 		</div>
 	);
 };
