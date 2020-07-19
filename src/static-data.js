@@ -1,4 +1,3 @@
-import Image from './assets/images/banners/gundam-wing-01.png';
 const images = [
 	require('./assets/images/banners/gundam-wing-01.png'),
 	require('./assets/images/banners/gundam-deathscythe.png'),

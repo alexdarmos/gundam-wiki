@@ -34,7 +34,7 @@ const GundamItem = ({ gundam }) => {
 				.querySelector('.gundam-container')
 				.removeEventListener('scroll', listener);
 		};
-	}, [gundam]);
+	}, [gundam, getActiveGundam]);
 
 	return (
 		<div

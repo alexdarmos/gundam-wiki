@@ -3,13 +3,12 @@ import GundamContext from '../context/gundam/GundamContext';
 //enables scroll to anchor tag for back button
 import { HashLink as Link } from 'react-router-hash-link';
 
-const GundamDetailsPage = ({ match }) => {
+const GundamDetailsPage = () => {
 	const gundamContext = useContext(GundamContext);
 	const { activeGundam } = gundamContext;
 
 	console.log(activeGundam);
 
-	// console.log(match.params.gundam);
 	return (
 		<div>
 			<p>{activeGundam.name}</p>
