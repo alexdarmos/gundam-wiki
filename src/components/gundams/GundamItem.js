@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import '../../assets/css/GundamItem.css';
+import PropTypes from 'prop-types';
 import GundamContext from '../context/gundam/GundamContext';
 const GundamItem = ({ gundam }) => {
 	const gundamContext = useContext(GundamContext);
@@ -50,6 +51,10 @@ const GundamItem = ({ gundam }) => {
 			</div>
 		</div>
 	);
+};
+
+GundamItem.propTypes = {
+	gundam: PropTypes.object.isRequired
 };
 
 export default GundamItem;

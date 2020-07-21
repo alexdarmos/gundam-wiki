@@ -2,10 +2,10 @@ import React from 'react';
 import Gundams from '../gundams/Gundams';
 import GundamDetailsBar from '../layout/GundamDetailsBar';
 
-const GundamPage = ({ gundams }) => {
+const GundamPage = () => {
 	return (
 		<div>
-			<Gundams gundams={gundams} />
+			<Gundams />
 			<GundamDetailsBar />
 		</div>
 	);

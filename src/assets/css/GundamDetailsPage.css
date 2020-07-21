@@ -1,0 +1,53 @@
+.gundam-details-page {
+	margin-top: 50px;
+}
+
+.row-1,
+.row-2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 1% 10%;
+}
+
+.row-2 {
+	flex-direction: column;
+	margin-top: 100px;
+}
+
+.col-left,
+.col-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 350px;
+}
+
+.col-right {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 60px;
+}
+
+.description {
+	width: 500px;
+}
+
+.gundam-image {
+	height: 350px;
+	width: 250px;
+	background: black;
+}
+
+.gundam-ability-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.gundam-ability {
+	border: solid 1px black;
+	padding: 60px 45px;
+}
